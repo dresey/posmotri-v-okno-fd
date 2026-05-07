@@ -62,7 +62,7 @@ ol {
 }
 
 .search-form{
-  width: 711px;
+  max-width: 711px;
   display: flex;
   align-items: flex-end;
   flex-direction: row;
@@ -73,8 +73,8 @@ ol {
   font-weight: 400;
   font-style: normal;
   color: white;
-  gap: 40px;
   line-height: 100%;
+  gap: 40px;
 }
 
 .content__details{
@@ -95,10 +95,10 @@ ol {
 }
 .result__video-container{
   margin-bottom: 16px;
-  padding-top: 74px;
+  margin-top: 74px;
   overflow: hidden;
   position: relative;
-}
+} 
 
 .result__video-container > video,
 .result__video-container > img {
@@ -222,13 +222,18 @@ ol {
 
 .search-form__fieldset {
   font-family: 'Fira sans condensed', sans-serif;
-  width: fit-content;
   height: fit-content;
   border: none;
+  width: 225px;
+  flex: 1;
+}
+
+.search-form__fieldset:first-child {
+  flex-basis: 225px;
+  flex-grow: 1;
 }
 
 .search-form__label {
-  width: fit-content;
   font-family: 'Fira sans condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -275,11 +280,11 @@ ol {
   outline: none;
   cursor: pointer;
   height: 100%;
+  width: 100%;
 }
 
 .search-form__label:has(.search-form__textfield:focus-visible) {
-  outline: 2px solid #fff;
-  border: 2px;
+  outline: 1px solid #fff;
 }
 
 .search-form__pseudo-checkbox{
@@ -309,8 +314,7 @@ ol {
 }
 
 .search-form__label:has(.search-form__checkbox:focus-visible) {
-  outline: 2px solid #fff;
-  outline-offset: 4px;
+  outline: 1px solid #fff;
 }
 .button {
   display: inline-flex;
@@ -318,7 +322,7 @@ ol {
   justify-content: center;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 700;
   color: #fff;
   background-color: transparent;
   border: 1px white solid;
@@ -334,16 +338,16 @@ ol {
 }
 
 .button:focus-visible {
-  outline: 2px solid #fff;
-  outline-offset: 4px;
+  outline: 1px solid #fff;
 }
 
 .button:active {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(84, 80, 80, 1);
 }
 
 .search-form__submit-button {
-  padding: 5px 73px;
+  padding: 6px 73px;
+  width: 194px;
 }
 
 .content__card-link{
@@ -353,11 +357,11 @@ ol {
 }
 
 .content__card-link_current {
-  background-color: transparent;
+  background-color: rgb(255 255 255 0.5);
 }
 
 .content__card-link:active {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(84, 80, 80, 1);
 }
 
 .content__card-link:hover {
@@ -365,8 +369,7 @@ ol {
 }
 
 .content__card-link:focus-visible {
-  outline: 2px solid #fff;
-  outline-offset: 4px;
+  outline: 1px solid #fff;
 }
 
 .content__list-item {
@@ -377,6 +380,8 @@ ol {
   width: 100%;
   margin: 0;
   margin-top: 0;
+  padding: 0 2px;
+  box-sizing: border-box;
 }
 
 .content__list-container::-webkit-scrollbar {
