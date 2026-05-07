@@ -16,6 +16,10 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 h1,
@@ -50,13 +54,6 @@ ol {
   background-color: #D9D9D9;
 }
 
-.page{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-top: 133px;
-}
-
 .content{
   display: flex;
   flex-direction: row;
@@ -65,8 +62,7 @@ ol {
 }
 
 .search-form{
-  width: 711px;
-  height: 54px;
+  max-width: 711px;
   display: flex;
   align-items: flex-end;
   flex-direction: row;
@@ -77,20 +73,17 @@ ol {
   font-weight: 400;
   font-style: normal;
   color: white;
-  gap: 40px;
   line-height: 100%;
+  gap: 40px;
 }
 
 .content__details{
-  height: 534px;
   width: 399px;
   font-family: 'Oswald', sans-serif;
   font-size: 75px;
-  font-style: bold;
   font-weight: 700;
   line-height: 94%;
-  margin: 0;
-  
+  margin: 0 2px;
 }
 
 .content__list-container{
@@ -102,10 +95,10 @@ ol {
 }
 .result__video-container{
   margin-bottom: 16px;
-  padding-top: 74px;
+  margin-top: 74px;
   overflow: hidden;
   position: relative;
-}
+} 
 
 .result__video-container > video,
 .result__video-container > img {
@@ -119,7 +112,7 @@ ol {
   gap: 24px;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  
   margin: 0;
   padding: 0;
 }
@@ -134,10 +127,10 @@ ol {
 }
 
 .content__video-card-description-container {
-
+  width: 196px;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   text-transform: uppercase;
 }
 
@@ -153,7 +146,7 @@ ol {
   font-weight: 400;
   color: #fff;
   margin-bottom: 7px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   font-style: normal;
   text-align: left;
   line-height: 100%;
@@ -229,13 +222,18 @@ ol {
 
 .search-form__fieldset {
   font-family: 'Fira sans condensed', sans-serif;
-  width: fit-content;
   height: fit-content;
   border: none;
+  width: 225px;
+  flex: 1;
+}
+
+.search-form__fieldset:first-child {
+  flex-basis: 225px;
+  flex-grow: 1;
 }
 
 .search-form__label {
-  width: fit-content;
   font-family: 'Fira sans condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -263,7 +261,7 @@ ol {
   color:rgb(255 255 255 / 0.7);
   width: 225px;
   line-height: 100%;
-  letter-spacing: 0%;
+  letter-spacing: 0;
 }
 
 .search-form__textfield {
@@ -281,13 +279,12 @@ ol {
   appearance: none;
   outline: none;
   cursor: pointer;
-  field-sizing: content;
   height: 100%;
+  width: 100%;
 }
 
 .search-form__label:has(.search-form__textfield:focus-visible) {
-  outline: 2px solid #fff;
-  border: 2px;
+  outline: 1px solid #fff;
 }
 
 .search-form__pseudo-checkbox{
@@ -317,8 +314,7 @@ ol {
 }
 
 .search-form__label:has(.search-form__checkbox:focus-visible) {
-  outline: 2px solid #fff;
-  outline-offset: 4px;
+  outline: 1px solid #fff;
 }
 .button {
   display: inline-flex;
@@ -326,7 +322,7 @@ ol {
   justify-content: center;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 700;
   color: #fff;
   background-color: transparent;
   border: 1px white solid;
@@ -335,34 +331,23 @@ ol {
   text-decoration: none;
   transition: opacity 0.2s ease;
   cursor: pointer;
-
 }
 
 .button:hover {
-  opacity: 0.8;
   text-decoration: underline;
 }
 
 .button:focus-visible {
-  outline: 2px solid #fff;
-  outline-offset: 4px;
+  outline: 1px solid #fff;
 }
 
 .button:active {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(84, 80, 80, 1);
 }
 
 .search-form__submit-button {
-  padding: 5px 73px;
-  background-color: transparent;
-  color: white;
-  font-weight: 600;
-  
-  cursor: pointer;
-}
-
-.search-form__submit-button:active{
-  background-color: rgba (255 255 255 0.5);
+  padding: 6px 73px;
+  width: 194px;
 }
 
 .content__card-link{
@@ -372,12 +357,11 @@ ol {
 }
 
 .content__card-link_current {
-  background-color: transparent;
+  background-color: rgb(255 255 255 0.5);
 }
 
 .content__card-link:active {
-  background-color: rgba(255, 255, 255, 0.5);
-  text-decoration: underline;
+  background-color: rgba(84, 80, 80, 1);
 }
 
 .content__card-link:hover {
@@ -385,12 +369,10 @@ ol {
 }
 
 .content__card-link:focus-visible {
-  outline: 2px solid #fff;
-  outline-offset: 4px;
+  outline: 1px solid #fff;
 }
 
 .content__list-item {
-  padding-left: 3px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -398,6 +380,8 @@ ol {
   width: 100%;
   margin: 0;
   margin-top: 0;
+  padding: 0 2px;
+  box-sizing: border-box;
 }
 
 .content__list-container::-webkit-scrollbar {
