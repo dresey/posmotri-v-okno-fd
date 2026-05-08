@@ -112,7 +112,6 @@ ol {
   gap: 24px;
   display: flex;
   flex-direction: column;
-  
   margin: 0;
   padding: 0;
 }
@@ -316,6 +315,7 @@ ol {
 .search-form__label:has(.search-form__checkbox:focus-visible) {
   outline: 1px solid #fff;
 }
+
 .button {
   display: inline-flex;
   align-items: center;
