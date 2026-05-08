@@ -189,7 +189,7 @@ ol {
   color: rgba(255, 255, 255, 0.7);
   margin: 0;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -357,7 +357,7 @@ ol {
 }
 
 .content__card-link_current {
-  background-color: rgb(255 255 255 0.5);
+  background-color: rgba(84, 80, 80, 1);
 }
 
 .content__card-link:active {
